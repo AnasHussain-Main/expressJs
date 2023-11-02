@@ -1,3 +1,11 @@
+var indexRouter = require('./routes/index');
+var aboutMeRouter = require('./routes/aboutme'); 
+var contactMeRouter = require('./routes/contactme');  
+
+app.use('/', indexRouter);
+app.use('/aboutme', aboutMeRouter);
+app.use('/contactme', contactMeRouter);
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -11,13 +19,19 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Add a custom middleware to set the current year variable
+app.use(function(req, res, next) {
+  res.locals.currentYear = new Date().getFullYear();
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

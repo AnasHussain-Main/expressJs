@@ -1,8 +1,278 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    
 }
 
-a {
-  color: #00B7FF;
+body {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.navbar a { 
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .4s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #04D9FF;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height:100vh;
+    padding: 0 10%;
+    background-image: url('/images/gear5.png');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+}
+
+.home-content{ 
+    max-width: 700px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.home-content h2 {
+    padding: 10px 0 10px 0;
+    font-size: 35px;
+    font-weight: 300;
+    color: #04D9FF;
+}
+
+.home-content h3 {
+    padding: 5px 0 5px 0;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+    width: 350px;
+    height: 50px;
+    
+}
+
+.btn-box a {
+    margin: 8px 0 0 0;
+    color: #04D9FF;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #04D9Ff;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.btn-box a:hover{
+    color: white;
+    transition: .3s;
+
+}
+
+footer{
+    
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+
+
+/*------------------------------------------------*/
+
+/*About Me Page*/
+
+.page {
+    background: linear-gradient(90deg, #ff6b6b, #ffe66d, #45cea2);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.main {
+    max-width: 900px;
+}
+
+.sub-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.sub-main h1{
+    padding-top: 10px;
+    font-size: 30px;
+    color: #ff6b6b;
+
+}
+
+.sub-main h2 {
+    font-size: 60px;;
+    color: #45cea2;
+    font-weight: 400;
+}
+
+.sub-main p {
+    padding-top: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    
+}
+
+.sub-main video{
+    padding-top: 20px;
+    width: 100%;
+}
+
+.sub-main img{
+    width: 230px;
+    padding: 10px 0 0 0;
+}
+
+/*------------------------------------------------*/
+
+/*-----Contact Page-----*/
+.main1{
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.container{
+    width: 80%;
+    margin: 100px auto;
+   
+}
+
+.contact-box{
+    
+    color: black;
+    background-color: white;
+    
+    
+}
+
+.main-contact{
+    padding: 40px 60px;
+    flex-basis: 40%;
+}
+
+.main-contact h3{
+    padding-bottom: 15px;
+
+
+
+
+}
+.container h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #04D9FF;
+    font-weight: 700;
+}
+
+.container p{
+    padding-bottom: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+label{
+    display: block;
+    color: #04D9FF;
+    margin-bottom: 8px;
+}
+
+
+button{
+    background-color: #04D9FF;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 35px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.end{
+    height: 40vh;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
 }
