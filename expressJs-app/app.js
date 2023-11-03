@@ -32,7 +32,7 @@ app.use('/', indexRouter);
 app.use('/aboutme', aboutMeRouter);
 app.use('/contactme', contactMeRouter);
 
-// catch 404 and forward to error handler
+// catch 404 and forward to error handle
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -49,3 +49,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
